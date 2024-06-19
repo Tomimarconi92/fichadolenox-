@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ephesis&family=Nunito+Sans:opsz,wght@6..12,200&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/static/css/estilos.css">    
+    <link rel="stylesheet" href="c:\Users\tmarconi\Desktop\Formulario Fichado\static\css\estilos.css">
+    <link rel="shortcut icon" href="https://www.grupoayudamedica.com.ar/wp-content/uploads/2022/11/cropped-Logo-GAM-1-1.png" type="image/png">
+</head>
+<body style="padding-left: 15%;padding-right: 15%;">
+    <h1 class="titulo-formulario" style="text-align: center;">FORMULARIO LENOX</h1>
+    <div class="contenedor_formulario" >
+        <form action="{{ url_for('submit') }}" method="post">
+            <div class="mb-3">
+                <label for="nombre" style="padding-top: 15px;" class="form-label">Nombre</label>
+                <input type="text" name="nombre" required class="form-control" id="exampleInputEmail1" >
+            </div>
+            <div class="mb-3">
+                <label for="apellido" style="padding-top: 15px;" class="form-label">Apellido</label>
+                <input type="text" name="apellido" required class="form-control" id="exampleInputEmail1" >
+            </div>
+            <div class="mb-3">
+                <label for="documento" style="padding-top: 15px;" class="form-label">DNI (sin puntos)</label>
+                <input type="number" name="documento" required class="form-control" id="exampleInputEmail1" inputmode="numeric" pattern="[0-9]*" >
+            </div>
+            <div class="mb-3">
+                <label for="legajo" style="padding-top: 15px;" class="form-label">Legajo</label>
+                <input type="number" name="legajo" required class="form-control" id="exampleInputEmail1" inputmode="numeric" pattern="[0-9]*" >
+            </div>
+            <div class="mb-3">
+                <label for="sector" style="padding-top: 15px;" class="form-label">Sector</label>
+                    <select for="dias_laborables" name = "sector" class="form-select" aria-label="Default select example">
+                        <option value="1">Administración</option>
+                        <option value="2">Cabina operativa</option>
+                        <option value="3">Coordinación</option>
+                        <option value="4">Otros</option>
+                    </select>
+            </div>
+            <div class="mb-3">
+                <label for="puesto" style="padding-top: 15px;" class="form-label">Puesto</label>
+                <input type="text" name="puesto" required class="form-control" id="exampleInputEmail1" >
+            </div>
+            <div class="mb-3">
+                <label for="horario_inicio_guardia" style="padding-top: 15px;" class="form-label">Horario inicio de guardia</label>
+                <input type="time" name="horario_inicio_guardia" required class="form-control" id="exampleInputEmail1" >
+            </div>    
+            <div class="mb-3">
+                <label for="horario_fin_guardia" style="padding-top: 15px;" class="form-label">Horario fin de guardia</label>
+                <input type="time" name="horario_fin_guardia" required class="form-control" id="exampleInputEmail1" >
+            </div>  
+            <div class="mb-3">
+                <label for="dias_laborables" style="padding-top: 15px;" class="form-label">Dias laborables</label>
+                <select for="dias_laborables" class="form-select" name ="dias_laborables" aria-label="Default select example">
+                    <option value="1">Semana</option>
+                    <option value="2">SaDoFe</option>
+                  </select>
+                <div class="mb-3">
+                <label for="direccion" style="padding-top: 15px;" class="form-label">Dirección</label>
+                <input type="text" name="direccion" required class="form-control" id="exampleInputEmail1" >
+            </div>
+            <div class="mb-3">
+                <label for="localidad" style="padding-top: 15px;" class="form-label">Localidad</label>
+                <input type="text" name="localidad" required class="form-control" id="exampleInputEmail1" >
+            </div>
+            <div class="mb-3">
+                <label for="provincia" style="padding-top: 15px;" class="form-label">Provincia</label>
+                <input type="text" name="provincia" required class="form-control" id="exampleInputEmail1" >
+            </div>
+            <div class="mb-3">
+                <label for="codigo_postal" style="padding-top: 15px;" class="form-label">Código Postal</label>
+                <input type="number" name="codigo_postal" required class="form-control" id="exampleInputEmail1" inputmode="numeric" pattern="[0-9]*" >
+            </div>
+            <div class="mb-3">
+                <label for="fecha_nacimiento" style="padding-top: 15px;" class="form-label">Fecha de nacimiento</label>
+                <input type="date" name="fecha_nacimiento" required class="form-control" id="exampleInputEmail1" >
+            </div>
+            <div class="mb-3">
+                <label for="email" style="padding-top: 15px;" class="form-label">E-mail personal</label>
+                <input type="email" name="email" required class="form-control" id="exampleInputEmail1" >
+            </div>
+            <div class="mb-3">
+                <label for="cuil" style="padding-top: 15px;" class="form-label">CUIL (sin puntos ni guión)</label>
+                <input type="number" name="cuil" required class="form-control" id="exampleInputEmail1" inputmode="numeric" pattern="[0-9]*" >
+            </div>
+            <div class="mb-3">
+                <label for="numero_celular" style="padding-top: 15px;" class="form-label">Número de celular</label>
+                <input type="number" name="numero_celular" required class="form-control" id="exampleInputEmail1" inputmode="numeric" pattern="[0-9]*" >
+            </div>
+            <div class="mb-3">
+                <label for="observaciones" style="padding-top: 15px;" class="form-label">Observaciones</label>
+                <input type="text" name="observaciones" class="form-control" id="exampleInputEmail1" >
+            </div>
+            <div style="padding-top: 15px;" >
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js" ></script>
+</body>
+</html>
